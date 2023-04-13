@@ -4,6 +4,7 @@ multiplicação e divisão e retorne o resultado da operação.
 Observação: Faça a validação para prevenir a divisão por 0 e também para garantir que
 a operação informada é válida. Retorne nulo para os casos de erro.
 */
+/*
 function calc(num1,num2,op){
     if(op=="+"){
         return num1+num2;
@@ -20,4 +21,21 @@ function calc(num1,num2,op){
         }
     }
     return null;
+}
+*/
+function calc(num1,num2,op){
+    switch(op){
+        case "+":
+            return num1+num2;
+        case "-":
+            return num1-num2;
+        case "*":
+            return num1*num2;
+        case "/":
+            if(num2!=0){
+                return num1/num2;
+            }
+        default:
+            return null;
+    }
 }
